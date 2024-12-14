@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surikat Blueprint</title>
+    <style>
+        body {
+            background: lightgrey;
+        }
+
+        #product-label, #client-label, #order-label {
+            text-align: center;
+        }
+
+        .def-field {
+            margin: 3px;
+        }
+
+        .product-field, .client-field {
+            margin-left: 3px;
+        }
+
+        .new-client-box {
+            margin: -10px 0px -5px 0px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p id="client-label"><label>Клієнт</label></p>
+        <p>
+            <input class="client-field" type="text" placeholder="Клієнт"/>
+        </p>
+        <p class="new-client-box">
+            <input type="checkbox" name="new-client" id='new-client' value="new" />
+            <label>Новий клієнт</label>
+        </p>
+        <p>
+            <input class="def-field" type="text" placeholder="Юридична особа"/>
+            <input class="def-field" type="text" placeholder="Менеджер компанії"/>
+            <input class="def-field" type="text" placeholder="Посада"/>
+            <input class="def-field" type="text" placeholder="Телефон"/>
+            <input class="def-field" type="text" placeholder="Канал залучення"/>
+            <input class="def-field" type="text" placeholder="Група"/>
+        </p>
+        <p id="order-label"><label>Деталі замовлення</label></p>
+        <p>
+            <input class="def-field" type="text" placeholder="Сума замовлення"/>
+            <input class="def-field" type="text" placeholder="Терміни"/>
+            <input class="def-field" type="text" placeholder="Реквізити"/>
+        </p>
+        <p id="product-label"><label>Товар</label></p>
+        <p>
+            <input class="product-field" type="text" placeholder="Назва"/>
+        </p>
+        <p>
+            <input class="def-field" type="text" placeholder="Ціна"/>
+            <input class="def-field" type="text" placeholder="Кількість"/>
+            <input class="def-field" type="text" placeholder="Технічний паспорт"/>
+        </p>
+    </form>
+
+    <script>
+        const new_client = document.getElementById('new-client')
+        if (new_client.checked) {
+            console.log('New client')
+        }
+    </script>
+</body>
+</html>
